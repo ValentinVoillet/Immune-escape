@@ -8,7 +8,7 @@ library(Seurat)
 ###---------------------
 ###--- Patient #1
 #- Raw counts
-raw_counts < -read.table(file = here("Patient1_raw_countMatrix.csv"), sep = ",", header = TRUE, row.names = 1)
+raw_counts <- read.table(file = here("Patient1_raw_countMatrix.csv"), sep = ",", header = TRUE, row.names = 1)
 
 #- Seurat
 PBMC <- CreateSeuratObject(counts = raw_counts)
@@ -71,7 +71,7 @@ PBMC@meta.data$clusters <- plyr::mapvalues(x = PBMC@meta.data$annotation.cluster
 ###---------------------
 ###--- Patient #2
 #- Raw counts
-raw_counts < -read.table(file = here("Patient2_raw_countMatrix.csv"), sep = ",", header = TRUE, row.names = 1)
+raw_counts <- read.table(file = here("Patient2_raw_countMatrix.csv"), sep = ",", header = TRUE, row.names = 1)
 
 #- Seurat
 PBMC <- CreateSeuratObject(counts = raw_counts)
